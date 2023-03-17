@@ -1,0 +1,17 @@
+<div class="container">
+  <h3 class="heading font-weight-light">Here are your contacts</h3>
+  <hr />
+</div>
+
+<div class="container main-part">
+  {% if contacts %}
+  {% for contact in contacts %}
+ {{ contact.email }}----{{ contact.name }}<br>
+    {% endfor %}
+    
+  {% else %}
+    <p class="d-block font-weight-light header my-2 mx-2">You have not saved any contacts yet!</p>
+  {% endif %}
+  <br>
+  <a href="{% url 'form' %}">Add</a>
+</div>

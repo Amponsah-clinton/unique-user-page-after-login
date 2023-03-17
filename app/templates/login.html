@@ -1,0 +1,13 @@
+<div style="padding: 100px 30rem ;">
+ <form method="POST" action="">
+    {% csrf_token %}
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Username" required name="username">
+  </div><br>
+  <div class="form-group">
+    <input type="password" class="form-control"  placeholder="Password" required name="password">
+  </div><br>
+  <button type="submit" class="btn btn-primary">Login</button>
+  <h3><a href="{% url 'register' %}">Register</a>  </h3>
+</div>
+
